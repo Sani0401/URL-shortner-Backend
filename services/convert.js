@@ -31,7 +31,7 @@ async function convertLink(req, res) {
     const shortId = shortid.generate();
     console.log(shortId);
     const shortUrl = `https://url-shortner-backend-1-f5pi.onrender.com/${shortId}`;
-
+console.log(shortUrl);
     const { error: insertError } = await supabase
       .from('URLS')
       .insert({ id: shortId, actualURL: originalUrl, shortURL: shortUrl, count: 0 });
