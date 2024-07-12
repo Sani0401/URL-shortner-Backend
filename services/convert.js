@@ -30,7 +30,7 @@ async function convertLink(req, res) {
     // If the URL doesn't exist, create a new short URL
     const shortId = shortid.generate();
     console.log(shortId);
-    const shortUrl = `http://localhost:3000/${shortId}`;
+    const shortUrl = `https://url-shortner-backend-1-f5pi.onrender.com/${shortId}`;
 
     const { error: insertError } = await supabase
       .from('URLS')
